@@ -97,6 +97,7 @@ img {
 @media(max-width: 272px) {
     header {
         justify-content: space-between;
+        
         h1 {
             width: 100%;
             max-width: 100%;
@@ -104,14 +105,15 @@ img {
         }
 
         nav {
-        width: 100%;
-        min-width: 100%;
-        
-        ul {
             width: 100%;
-            flex-direction: row;
-            height: fit-content;
-            justify-content: space-between;
+            min-width: 100%;
+            
+            ul {
+                width: 100%;
+                flex-direction: row;
+                height: fit-content;
+                justify-content: space-between;
+            }
         }
     }
 }
