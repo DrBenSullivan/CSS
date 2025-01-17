@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Demonstration</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <section class="section j-start">
-        <img class="image image__one" src="https://picsum.photos/150/150" alt="A random image" />
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Visited Link</a></li>
+                <li><a>Unvisited Link</a></li>
+                <li><a>Unvisited Link</a></li>
+            </ul>
+        </nav>
+        <h1>CSS Demonstration</h1>
+        <div></div>
+    </header>
+
+    <section class="flex j-start">
+        <img class="size-10" src="https://picsum.photos/150/150" alt="A random image" />
     </section>
 
-    <section class="section j-center">
-        <img class="image image__two" src="https://picsum.photos/150/150" alt="A random image" />
+    <section class="flex j-center">
+        <img class="size-10 round" src="https://picsum.photos/150/150" alt="A random image" />
     </section>
 
-    <section class="section j-end">
-        <img class="image image__three" src="https://picsum.photos/150/150" alt="A random image" />
+    <section class="flex j-end">
+        <img class="size-10 border" src="https://picsum.photos/150/150" alt="A random image" />
     </section>
 </body>
 </html>
