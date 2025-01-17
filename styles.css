@@ -1,3 +1,37 @@
 body {
     background-color: #00194b;
 }
+
+section {
+    margin: 2.5rem;
+    height: 10rem;
+    border: #fff 1px solid;
+    display: flex;
+    flex-direction: row;
+}
+
+.j-start {
+    justify-content: flex-start;
+}
+
+.j-center {
+    justify-content: center;
+}
+
+.j-end {
+    justify-content: flex-end;
+}
+
+.image {
+    height: 10rem;
+    width: 10rem;
+}
+
+.image__two {
+    border-radius: 5rem;
+}
+
+.image__three {
+    border: #fff 5px solid;
+    box-sizing: border-box;
+}
