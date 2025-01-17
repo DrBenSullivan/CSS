@@ -1,6 +1,6 @@
 * {
     font-family: 'Courier New', Courier, monospace;
-    font-size: calc(1vw + 1vh);
+    font-size: calc(8px + 1.5vw);
 }
 
 body {
@@ -10,6 +10,7 @@ body {
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 2.5% 2.5% 2.5%;
     height: 5rem;
     border: #fff 1px solid;
@@ -18,18 +19,22 @@ header {
     min-height: fit-content;
     max-width: 100%;
 
-    h1, nav, div {
+    nav, div {
         height: 100%;
-        flex: 1;
-        max-height: fit-content;
-        min-width: fit-content;
     }
 
     h1 {
-        max-width: min-content;
-        text-align: center;
+        flex: 1 1 auto;
         text-wrap: wrap;
-        font-size: calc(2vw + 2vh);
+        font-size: calc(10px + 4.5vw);
+        margin: 0;
+        text-align: center;
+        height: fit-content;
+    }
+
+    nav {
+        justify-content: space-between;
+        margin: 0;
     }
 
     nav ul {
@@ -38,8 +43,9 @@ header {
         flex-direction: column;
         justify-content: space-between;
         list-style-type: none;
-        padding-left: 0;
+        padding: 0;
         margin: 0;
+        max-width: fit-content;
     }   
 }
 
@@ -90,29 +96,60 @@ img {
 }
 
 .size-10 {
-    height: 10rem;
-    width: 10rem;
+    height: calc(10vw + 10vh);
+    width: calc(10vw + 10vh);
 }
 
-@media(max-width: 272px) {
+@media(275px <= width <= 400px) {
+
     header {
-        justify-content: space-between;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        align-items: center;
         
         h1 {
+            max-height: fit-content;
             width: 100%;
             max-width: 100%;
-            order: -1;
         }
 
         nav {
             width: 100%;
             min-width: 100%;
+            max-height: fit-content;
+            height: fit-content;
+            justify-items: space-between;
+            flex: 1 0 content;
             
             ul {
                 width: 100%;
                 flex-direction: row;
-                height: fit-content;
                 justify-content: space-between;
+                max-width: inherit;
+                flex: 1 0 content;
+
+                li {
+                    max-height: fit-content;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media(width < 275px) {
+    header {
+        flex-direction: column-reverse;
+
+        nav {
+            flex-direction: column;
+            align-self: center;
+
+            ul {
+                justify-content: space-evenly;
+                text-align: center;
             }
         }
     }
